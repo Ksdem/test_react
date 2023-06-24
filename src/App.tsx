@@ -18,6 +18,7 @@ function App() {
        <div className="App">
       <Button name={"1"} callBack={()=>{Button1Foo(1, "Ks")}}/>
       <Button name={"2"} callBack={()=>{Button2Foo(2, "Mat")}}/>
+
        </div>
      );
 
