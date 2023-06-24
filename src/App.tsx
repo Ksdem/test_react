@@ -3,6 +3,7 @@ import React from 'react';
 import './App.css';
 
 import Button from "./components/Button";
+import Calc from "./components/Calc";
 
 function App() {
     /*let onClick=(name:string)=>{
@@ -19,13 +20,16 @@ function App() {
     }
     return (
         <div className="App">
-            <Button name={"1"} callBack={() => {
+            <div className="button"><Button name={"1"} callBack={() => {
                 Button1Foo(1, "Ks")
             }}/>
-            <Button name={"2"} callBack={() => {
-                Button2Foo(2, "Mat")
-            }}/>
-            <Button name={"3"} callBack={Button3Foo}/>
+                <Button name={"2"} callBack={() => {
+                    Button2Foo(2, "Mat")
+                }}/>
+                <Button name={"3"} callBack={Button3Foo}/></div>
+
+            <div><Calc/></div>
+
 
         </div>
     );
