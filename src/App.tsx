@@ -1,26 +1,41 @@
 import React from 'react';
-import logo from './logo.svg';
+
 import './App.css';
 
+import Button from "./components/Button";
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+     /*let onClick=(name:string)=>{
+         console.log(name)
+     }*/
+    let Button1Foo=(id:number, name:string)=>{
+        console.log(id, name)
+    }
+    let Button2Foo=(id:number, name:string)=>{
+        console.log(id, name)
+    }
+     return (
+       <div className="App">
+      <Button name={"1"} callBack={()=>{Button1Foo(1, "Ks")}}/>
+      <Button name={"2"} callBack={()=>{Button2Foo(2, "Mat")}}/>
+       </div>
+     );
+
+/*
+    let foo1=()=>{
+        console.log("100200")
+    }
+    let foo2=(id:string)=>{
+        console.log(id);
+    }
+
+    return (
+        <div className="App">
+            <button onClick={foo1}>1</button>
+            <button onClick={()=>{foo2("100200")}}>2</button>
+        </div>)
+*/
+
 }
 
 export default App;
