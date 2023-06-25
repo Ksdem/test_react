@@ -21,3 +21,16 @@
     display: flex;
     flex-direction: row;
 }
+
+.array{
+    display: flex;
+    justify-content: initial;
+}
+
+
+.table{
+display: flex;
+    flex-direction: column;
+    border: 1px dashed black;
+    flex-grow: initial;
+}
