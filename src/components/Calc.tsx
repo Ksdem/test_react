@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-let a = 1;
+
 
 function Calc() {
     let [a, setA] = useState(1)

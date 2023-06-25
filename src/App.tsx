@@ -4,6 +4,7 @@ import './App.css';
 
 import Button from "./components/Button";
 import Calc from "./components/Calc";
+import Array from "./components/Array";
 
 function App() {
     /*let onClick=(name:string)=>{
@@ -29,25 +30,12 @@ function App() {
                 <Button name={"3"} callBack={Button3Foo}/></div>
 
             <div><Calc/></div>
+            <div><Array/></div>
 
 
         </div>
     );
 
-    /*
-        let foo1=()=>{
-            console.log("100200")
-        }
-        let foo2=(id:string)=>{
-            console.log(id);
-        }
-
-        return (
-            <div className="App">
-                <button onClick={foo1}>1</button>
-                <button onClick={()=>{foo2("100200")}}>2</button>
-            </div>)
-    */
 
 }
 
