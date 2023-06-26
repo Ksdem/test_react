@@ -34,3 +34,8 @@ display: flex;
     border: 1px dashed black;
     flex-grow: initial;
 }
+.money{
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+}

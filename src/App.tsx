@@ -5,6 +5,7 @@ import './App.css';
 import Button from "./components/Button";
 import Calc from "./components/Calc";
 import Array from "./components/Array";
+import Money from "./components/Money";
 
 function App() {
     /*let onClick=(name:string)=>{
@@ -31,6 +32,8 @@ function App() {
 
             <div><Calc/></div>
             <div><Array/></div>
+            <div><Money/></div>
+
 
 
         </div>
