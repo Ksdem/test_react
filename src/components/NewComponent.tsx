@@ -1,16 +1,22 @@
-import React, {useState} from 'react';
 
-/*
-const NewComponent=()=>{
+import React from 'react';
+import {FilterType, IMoneyType} from "./Money";
+
+
+ type NewComponentType={
+     items:IMoneyType[]
+     onFilterDollars:(nameButton: FilterType) => void;
+ }
+const NewComponent=(props:NewComponentType)=>{
     return(
-       /!* <div className="money">
-            {onFilterDollars.map((i, index) => {
+       <div className="money">
+            {props.items.map((money: IMoneyType, index) => {
                 return (
                     <>
                         <div key={index}>
-                            <span>{i.banknots}</span>
-                            <span>{i.value}</span>
-                            <span>{i.number}</span>
+                            <span>{money.banknots}</span>
+                            <span>{money.value}</span>
+                            <span>{money.number}</span>
 
                         </div>
 
@@ -19,17 +25,16 @@ const NewComponent=()=>{
                 )
             })}
 
-            <button onClick={() => onClickFilter("Dollars")}>Dollars</button>
-            <button onClick={() => onClickFilter("RUBLS")}>RUBLS</button>
-            <button onClick={() => onClickFilter("all")}>all</button>
+            <button onClick={() => props.onFilterDollars("Dollars")}>Dollars</button>
+            <button onClick={() => props.onFilterDollars("RUBLS")}>RUBLS</button>
+            <button onClick={() => props.onFilterDollars("all")}>all</button>
 
 
-        </div>*!/
+        </div>)
 
 }
-*/
 
 
 
+export default NewComponent;
 
-/*export default NewComponent;*/

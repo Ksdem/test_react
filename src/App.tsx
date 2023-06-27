@@ -22,7 +22,8 @@ function App() {
     }
     return (
         <div className="App">
-            <div className="button"><Button name={"1"} callBack={() => {
+            <div className="button">
+                <Button name={"1"} callBack={() => {
                 Button1Foo(1, "Ks")
             }}/>
                 <Button name={"2"} callBack={() => {
