@@ -28,20 +28,21 @@ function Money() {
 
     let onClickFilter = (nameButton: FilterType) => {
         setFilter(nameButton)
+        getFilteredItems();
     }
 
-    const getFilteredItems = (): IMoneyType[] => {
+    const getFilteredItems = (): void=> {
         if (filter === "Dollars") {
-            return money.filter((i) => i.banknots === "Dollars")
+            setMoney(basedItems.filter((i) => i.banknots === "Dollars"))
         } else if (filter === "RUBLS") {
-            return money.filter((i) => i.banknots === "RUBLS")
+            setMoney(basedItems.filter((i) => i.banknots === "RUBLS"))
         } else {
-            return money
+            setMoney([...basedItems])
         }
     }
 
     return (
-        <NewComponent items={getFilteredItems()} onFilterDollars={onClickFilter}/>
+        <NewComponent items={money} onFilterDollars={onClickFilter}/>
     );
 
 }
