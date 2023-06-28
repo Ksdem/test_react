@@ -2,8 +2,7 @@ import React, {useEffect, useState} from 'react';
 import NewComponent from "./NewComponent";
 
 
-
-export type FilterType="all"| "Dollars"|"RUBLS";
+export type FilterType = "all" | "Dollars" | "RUBLS";
 
 export type IMoneyType = {
     banknots: string;
@@ -11,7 +10,7 @@ export type IMoneyType = {
     number: string;
 }
 
-const basedItems=  [
+const basedItems = [
     {banknots: 'Dollars', value: 100, number: ' a1234567890'},
     {banknots: 'Dollars', value: 50, number: ' z1234567890'},
     {banknots: 'RUBLS', value: 100, number: ' w1234567890'},
@@ -25,33 +24,24 @@ const basedItems=  [
 function Money() {
     const [money, setMoney] = useState<IMoneyType[]>(basedItems);
 
-
-
-
     const [filter, setFilter] = useState<FilterType>("all")
 
     let onClickFilter = (nameButton: FilterType) => {
         setFilter(nameButton)
     }
 
-    useEffect(() => {
-
+    const getFilteredItems = (): IMoneyType[] => {
         if (filter === "Dollars") {
-            setMoney(basedItems.filter((i) => i.banknots === "Dollars"))
-        }
-        else if (filter === "RUBLS") {
-            setMoney(basedItems.filter((i) => i.banknots === "RUBLS"))
+            return money.filter((i) => i.banknots === "Dollars")
+        } else if (filter === "RUBLS") {
+            return money.filter((i) => i.banknots === "RUBLS")
         } else {
-            setMoney(basedItems)
+            return money
         }
-    }, [filter])
-
-
-
-
+    }
 
     return (
-       <NewComponent items={money} onFilterDollars={onClickFilter}/>
+        <NewComponent items={getFilteredItems()} onFilterDollars={onClickFilter}/>
     );
 
 }

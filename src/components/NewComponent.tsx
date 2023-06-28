@@ -1,15 +1,14 @@
-
 import React from 'react';
 import {FilterType, IMoneyType} from "./Money";
 
 
- type NewComponentType={
-     items:IMoneyType[]
-     onFilterDollars:(nameButton: FilterType) => void;
- }
-const NewComponent=(props:NewComponentType)=>{
-    return(
-       <div className="money">
+type NewComponentType = {
+    items: IMoneyType[]
+    onFilterDollars: (nameButton: FilterType) => void;
+}
+const NewComponent = (props: NewComponentType) => {
+    return (
+        <div className="money">
             {props.items.map((money: IMoneyType, index) => {
                 return (
                     <>
@@ -33,7 +32,6 @@ const NewComponent=(props:NewComponentType)=>{
         </div>)
 
 }
-
 
 
 export default NewComponent;
